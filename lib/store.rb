@@ -3,4 +3,13 @@ class Store < ActiveRecord::Base
   validates :name, presence: true, length: { minimum: 3}
   validates :annual_revenue, presence: true, numericality: { greater_than_or_equal_to: 0}
 
+  before_destroy :checkEmployees
+
+  private
+  def checkEmployees
+    if self.employees.size > 0
+      throw :abort
+    end
+  end
+
 end

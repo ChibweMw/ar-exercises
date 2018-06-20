@@ -19,6 +19,6 @@ puts "----------"
 # puts "Enter hourly rate"
 # hourlyRate = gets.chomp
 
-newEmployee = @store1.employees.create(first_name: "Paul", last_name: "Sweenie", hourly_rate: 60, )
+# newEmployee = @store1.employees.create(first_name: "Paul", last_name: "Sweenie", hourly_rate: 60, )
 
-puts newEmployee.errors.full_messages
+# puts newEmployee.errors.full_messages
